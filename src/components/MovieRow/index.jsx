@@ -8,11 +8,14 @@ export const MovieRow = ({title, items}) => {
     <div>
       <h2>{title}</h2>
       <div className="movieRow--listarea">
-        {items.results.length > 0 &&
-          items.results.map((item, key) => (
-            <img src={imgURL + item.poster_path} />
-          ))  
-        }
+        <div className="movieRow-list">
+          {items.results.length > 0 &&
+            items.results.map((item, key) => (              
+                <div className="movieRow--item">
+                  <img src={imgURL + item.poster_path} />
+                </div>
+          ))}          
+        </div>
       </div>
     </div>
   )
