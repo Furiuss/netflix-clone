@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const FeatureMovie = ({movie}) => {
+export const FeatureMovie = ({item}) => {
   return (
     <div>
-      {console.log(movie)}
+      {item &&
+        <h1>Hello World</h1>  
+      }
     </div>
   )
 }
