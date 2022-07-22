@@ -64,8 +64,10 @@ export default {
           info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`)
         break;
         default:
-          return info = null;
+          info = null;
+        break;
       }
     }
+    return info;
   }
 }
