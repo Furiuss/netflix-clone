@@ -8,7 +8,7 @@ const basicFetch = async (endpoint) => {
 }
 
 export default {
-  getHomeList: async() => {
+  getHomeList: async () => {
     return [
       {
         slug: 'originals',
