@@ -17,9 +17,9 @@ export const FeatureMovie = ({item}) => {
                 <div className="featured--points">{item.vote_average} pontos</div>
                 <div className="featured--year">2099</div>
                 <div className="featured--seasons"> 
-                  {item.number_of_seasons > 1 
+                { item.number_of_seasons > 1 
                   ? <p>{item.number_of_seasons} temporadas</p> 
-                  : <p>{item.number_of_seasons} temporada</p>}
+                  : <p>{item.number_of_seasons} temporada</p> }
                 </div>
               </div>
             </div>
