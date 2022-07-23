@@ -21,13 +21,20 @@ export const FeatureMovie = ({item}) => {
             <div className="featured--horizontal">
               <div className="featured--name">{item.original_name}</div>
               <div className="featured--info">
-                <div className="featured--points">{item.vote_average} pontos</div>
+                
+                <div className={`featured--points ${item.vote_average >= 5 ? "green" : "red"}`}>
+                  {item.vote_average} pontos
+                </div>
+
                 <div className="featured--year">{firstDate.getFullYear()}</div>
+                
                 <div className="featured--seasons"> 
                   {item.number_of_seasons} temporada{item.number_of_seasons > 1 ? 's' : ''}
                 </div>
               </div>
+              
               <div className="featured--description">{item.overview}</div>
+
               <div className="featured--buttons">
                 <a href={`/watch/${item.id}`}>▶ Assistir</a> {' '}
                 <a href={`/list/add/${item.id}`}>+ Minha Lista</a>
