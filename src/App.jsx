@@ -4,6 +4,7 @@ import {MovieRow} from './components/MovieRow'
 import {FeatureMovie} from './components/FeatureMovie'
 
 import './App.css'
+import { Header } from './components/Header'
 
 function App() {
 
@@ -29,21 +30,23 @@ function App() {
 
   return (
     <div className="page">
+      
+      <Header />
 
-    {featureData && 
-      <FeatureMovie item={featureData}/>
-    }
+      {featureData && 
+        <FeatureMovie item={featureData}/>
+      }
 
       <section className="lists">
-        {movieList.map((item, key) => (
-          <div>
-            <MovieRow 
-              key={key} 
-              title={item.title}
-              items={item.items}
-             />
-          </div>
-        ))}
+          {movieList.map((item, key) => (
+            <div>
+              <MovieRow 
+                key={key} 
+                title={item.title}
+                items={item.items}
+              />
+            </div>
+          ))}
       </section>
     </div>
   )
