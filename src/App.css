@@ -11,3 +11,7 @@ body {
   margin: 0;
   font-family: Poppins;
 }
+
+.lists {
+  margin-top: -150px;
+}
