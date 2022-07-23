@@ -19,7 +19,7 @@ export const FeatureMovie = ({item}) => {
         }}>
           <div className="featured--vertical">
             <div className="featured--horizontal">
-              <div className="feature--name">{item.original_name}</div>
+              <div className="featured--name">{item.original_name}</div>
               <div className="featured--info">
                 <div className="featured--points">{item.vote_average} pontos</div>
                 <div className="featured--year">{firstDate.getFullYear()}</div>
