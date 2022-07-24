@@ -72,10 +72,12 @@ function App() {
         Direitos de imagem para a <a href="https://www.netflix.com/br/">Netflix</a> <br/>
         Dados pegos do site Themoviedb.org
       </footer>
-
-      <div className="loading">
-        <img src="https://i.pinimg.com/originals/ce/b6/69/ceb66928c3cbf1354cc6c24252467cab.gif" alt="Loading" />
-      </div>
+      
+      {movieList.length <= 0 &&
+        <div className="loading">
+          <img src="https://i.pinimg.com/originals/ce/b6/69/ceb66928c3cbf1354cc6c24252467cab.gif" alt="Loading" />
+        </div>
+      }
     </div>
   )
 }
