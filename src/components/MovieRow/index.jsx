@@ -4,13 +4,13 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const imgURL = import.meta.env.VITE_IMG;
-let x = scrollX + Math.round(window.innerWidth / 2)
 
 export const MovieRow = ({title, items}) => {
 
   const [scrollX, setScrollX] = useState(-400)
 
   const handleLeftArrow = () => {
+    let x = scrollX + Math.round(window.innerWidth / 2)
     if (x > 0) {
       x = 0
     };
@@ -18,11 +18,14 @@ export const MovieRow = ({title, items}) => {
   }
 
   const handleRightArrow = () => {
-    let listW = items.results.length * 150;
-     if((window.innerWidth - listW) > x) {
-      x = (window.innerWidth - listW) - 60
-     }
-     setScrollX(x);
+    const windowWidth = Math.round(window.innerWidth / 2);
+        let x = scrollX - windowWidth;
+        const max = (-1 * items.results.length * 250) + (2 * windowWidth) - 60;
+        if( x < max ){
+            x = max;
+        }
+
+        setScrollX(x);
   }
 
   return (
@@ -36,6 +39,7 @@ export const MovieRow = ({title, items}) => {
       <div className="movieRow--right" onClick={handleRightArrow}>
         <NavigateNextIcon style={{fontSize: 50}} />
       </div>
+      
       <div className="movieRow--listarea">
         <div className="movieRow--list" style={{
               marginLeft: scrollX,
