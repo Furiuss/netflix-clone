@@ -57,9 +57,8 @@ function App() {
 
       <section className="lists">
           {movieList.map((item, key) => (
-            <div>
-              <MovieRow 
-                key={key} 
+            <div key={key}>
+              <MovieRow  
                 title={item.title}
                 items={item.items}
               />
