@@ -9,6 +9,11 @@ export const FeatureMovie = ({item}) => {
     genres.push(item.genres[i].name)
   }
 
+  let description = item.overview;
+  if(description.length > 200) {
+    description = description.substring(0, 250)+'...'
+  }
+
   return (
     <div>
       {item &&
@@ -33,7 +38,7 @@ export const FeatureMovie = ({item}) => {
                 </div>
               </div>
               
-              <div className="featured--description">{item.overview}</div>
+              <div className="featured--description">{description}</div>
 
               <div className="featured--buttons">
                 <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Assistir</a>
