@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import './style.css'
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import {MdNavigateNext} from 'react-icons/md'
+import {MdNavigateBefore} from 'react-icons/md'
 
 const imgURL = import.meta.env.VITE_IMG;
 
 export const MovieRow = ({title, items}) => {
 
-  const [scrollX, setScrollX] = useState(-400)
+  const [scrollX, setScrollX] = useState(0)
 
   const handleLeftArrow = () => {
     let x = scrollX + Math.round(window.innerWidth / 2)
@@ -31,11 +31,11 @@ export const MovieRow = ({title, items}) => {
       <h2>{title}</h2>
 
       <div className="movieRow--left" onClick={handleLeftArrow}>
-        <NavigateBeforeIcon style={{fontSize: 50}} />
+        <MdNavigateBefore style={{fontSize: 50}} />
       </div>
 
       <div className="movieRow--right" onClick={handleRightArrow}>
-        <NavigateNextIcon style={{fontSize: 50}} />
+        <MdNavigateNext style={{fontSize: 50}} />
       </div>
       <div className="movieRow--listarea">
         <div className="movieRow--list" style={{
