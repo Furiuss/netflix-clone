@@ -3,6 +3,8 @@ import Tmdb from './Tmdb'
 import {MovieRow} from './components/MovieRow'
 import {FeatureMovie} from './components/FeatureMovie'
 
+import {BsFillArrowRightSquareFill} from 'react-icons/bs'
+
 import './App.css'
 import { Header } from './components/Header'
 
@@ -64,6 +66,12 @@ function App() {
             </div>
           ))}
       </section>
+      
+      <footer>
+        Feito com <span role="img" aria-label="heart">❤️</span> por <a href="https://github.com/Furiuss">André</a> <br />
+        Direitos de imagem para a <a href="https://www.netflix.com/br/">Netflix</a> <br/>
+        Dados pegos do site Themoviedb.org
+      </footer>
     </div>
   )
 }

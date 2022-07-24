@@ -23,7 +23,7 @@ export const FeatureMovie = ({item}) => {
               <div className="featured--info">
                 
                 <div className={`featured--points ${item.vote_average >= 5 ? "green" : "red"}`}>
-                  {item.vote_average} pontos
+                  {item.vote_average.toFixed(1)} pontos
                 </div>
 
                 <div className="featured--year">{firstDate.getFullYear()}</div>
