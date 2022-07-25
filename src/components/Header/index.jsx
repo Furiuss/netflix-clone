@@ -1,4 +1,4 @@
-import React from "react";
+import {NavLink} from 'react-router-dom'
 
 import "./syle.css";
 
@@ -13,6 +13,21 @@ export const Header = ({ black }) => {
               alt=""
             />
           </a>
+
+          <span>
+            <NavLink
+              to="/movies"
+            >
+              Movies
+            </NavLink>
+          </span>
+          <span>
+            <NavLink
+              to="/movies"
+            >
+              Series
+            </NavLink>
+          </span>
         </div>
 
         

@@ -12,6 +12,11 @@ body {
   font-family: Poppins;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .lists {
   margin-top: -100px;
 }
