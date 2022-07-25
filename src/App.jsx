@@ -1,4 +1,5 @@
-import {Outlet} from 'reac-router-dom'
+import {useState, useEffect} from 'react'
+import {Outlet} from 'react-router-dom'
 import { Header } from './components/Header'
 
 import './App.css'
@@ -31,7 +32,7 @@ function App() {
         Direitos de imagem para a <a href="https://www.netflix.com/br/">Netflix</a> <br/>
         Dados pegos do site Themoviedb.org
       </footer>
-      
+
     </div>
   )
 }

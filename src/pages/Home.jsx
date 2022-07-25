@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Tmdb from '../Tmdb'
-import {MovieRow} from '.;/components/MovieRow'
+import {MovieRow} from '../components/MovieRow'
 import {FeatureMovie} from '../components/FeatureMovie'
 
 export const Home = () => {  
