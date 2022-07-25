@@ -1,4 +1,6 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import { FaSearch, FaBell } from "react-icons/fa";
+import { RiArrowDownSFill } from "react-icons/ri";
 
 import "./syle.css";
 
@@ -13,28 +15,27 @@ export const Header = ({ black }) => {
               alt=""
             />
           </a>
-
-          <span>
-            <NavLink
-              to="/movies"
-            >
-              Movies
-            </NavLink>
-          </span>
-          <span>
-            <NavLink
-              to="/movies"
-            >
-              Series
-            </NavLink>
-          </span>
         </div>
-
-        
-        
+        <span>
+          <NavLink to="/movies">Homepage</NavLink>
+        </span>
+        <span>
+          <NavLink to="/movies">Movies</NavLink>
+        </span>
+        <span>
+          <NavLink to="/movies">Series</NavLink>
+        </span>
+        <span>
+          <NavLink to="/movies">Popular</NavLink>
+        </span>
+        <span>
+          <NavLink to="/movies">My List</NavLink>
+        </span>
       </div>
 
       <div className="header--right">
+        <FaSearch className="icon" />
+        <FaBell className="icon"/>
         <div className="header--user">
           <a href="/">
             <img
@@ -42,6 +43,9 @@ export const Header = ({ black }) => {
               alt=""
             />
           </a>
+        </div>
+        <div className="profile">
+          <RiArrowDownSFill className="icon" />
         </div>
       </div>
     </header>
