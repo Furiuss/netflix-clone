@@ -9,12 +9,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  background: transparent;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
   transition: .5s;
 }
 
 header.black {
   background: black;
+}
+
+.header--left {
+  display: flex;
+  align-items: center;
+}
+
+.header--left span {
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 .header--logo {
