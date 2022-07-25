@@ -3,8 +3,6 @@ import Tmdb from './Tmdb'
 import {MovieRow} from './components/MovieRow'
 import {FeatureMovie} from './components/FeatureMovie'
 
-import {BsFillArrowRightSquareFill} from 'react-icons/bs'
-
 import './App.css'
 import { Header } from './components/Header'
 
